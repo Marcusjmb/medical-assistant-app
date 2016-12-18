@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header> Favoritos </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        Neosaldina- 10mg
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Receitas</ion-card-header>
+    <ion-card-content>
+      <button ion-button full icon-left color="Primary" (click)="receitasPageTapped()"> 
+      <ion-icon large name="list"></ion-icon>
+           Criar Nova Receita
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Remédios</ion-card-header>
+    <ion-card-content>
+      <button ion-button full icon-left color="Primary" (click)="remediosPageTapped()"> 
+       <ion-icon large name="medkit"></ion-icon>
+             Consultar Remédios
+      </button>
+    </ion-card-content>
+
+
+
+  </ion-card>
+
+</ion-content>

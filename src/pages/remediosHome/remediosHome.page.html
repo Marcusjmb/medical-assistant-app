@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Remedios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-tabs>
+    <ion-tab tabTitle = "Remedios" [root] = "remediosPage" [rootParams] = team tabIcon = "basketball"> </ion-tab>   
+   <ion-tab tabTitle = "Lista" [root] = "listaRemediosPage" [rootParams] = team tabIcon = "add"> </ion-tab>   
+</ion-tabs>

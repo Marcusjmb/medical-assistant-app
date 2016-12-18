@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-searchbar (ionInput)="getMedicines($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let medicine of medicines">
+      <ion-row> 
+        <ion-col width-20>
+        <button ion-button icon-only clear >
+          <ion-icon name="md-star-outline" *ngIf="!medicine.favorite" clear></ion-icon>
+          <ion-icon name="md-star" *ngIf="medicine.favorite"clear></ion-icon>
+        </button>
+        </ion-col>
+  <ion-col width-65>
+        {{medicine.nome}}
+        <p>
+          <ion-badge color= "light" *ngIf="medicine.dosagem.frasco">fr</ion-badge>
+          <ion-badge color = "light" *ngIf="medicine.dosagem.comprimido">cp</ion-badge>
+        </p>
+  </ion-col>
+  <ion-col width-15>
+        <button ion-button icon-only clear (click)="addMedicines($event,medicine)">
+          <ion-icon color = "primary" name="md-add-circle" *ngIf="this.receipts.indexOf(medicine) === -1" ></ion-icon>
+          <ion-icon color = "danger" name="md-remove-circle" *ngIf="this.receipts.indexOf(medicine) != -1" ></ion-icon>
+        </button>
+    </ion-col>
+</ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

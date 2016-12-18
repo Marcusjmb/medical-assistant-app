@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+   <ion-card>
+     <ion-card-header> Prescrição Médica </ion-card-header>
+     <ion-list *ngFor="let receipt of receipts">
+        {{receipt.nome}}
+     </ion-list>
+   </ion-card>
+
+</ion-content>
